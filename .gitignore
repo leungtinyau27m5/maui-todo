@@ -1,0 +1,10 @@
+.vs/
+.vscode/
+
+.DS_Store
+log/
+bin/
+obj/
+_site/
+.optemp/
+_repo.*/

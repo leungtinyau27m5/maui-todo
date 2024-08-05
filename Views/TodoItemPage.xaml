@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TODO.Views.TodoItemPage"
+             Title="{Binding Name}">
+    <VerticalStackLayout>
+        <VerticalStackLayout Margin="20"
+                             Spacing="10"
+                             VerticalOptions="StartAndExpand">
+            <Label Text="Name" />
+            <Entry Text="{Binding Name}" />
+
+            <Label Text="Notes" />
+            <Entry Text="{Binding Notes}" />
+
+            <HorizontalStackLayout>
+                <Label Margin="0, 10"
+                       HorizontalOptions="StartAndExpand"
+                       Text="Done" />
+                <Switch HorizontalOptions="EndAndExpand"
+                        IsToggled="{Binding Done}" />
+            </HorizontalStackLayout>
+
+            <Button Clicked="OnSave"
+                    Text="Save" />
+
+            <Button Clicked="OnDelete"
+                    Text="Delete" />
+
+            <Button Clicked="OnCancel"
+                    Text="Cancel" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
